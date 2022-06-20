@@ -2,10 +2,19 @@
     position: relative;
     min-width: 320px;
     min-height: 509px;
-    margin: 0 40px;
+    margin: 30px 40px;
     display: flex;
     flex-direction: column;
 
+  }
+  @media(max-width:480px){
+        .productItem{
+            margin: 30px 0px;
+            /* min-width: 80%; */
+        }
+        .productCard{
+            /* min-width: 80%; */
+        }
   }
 .productItem_ended{
     position: absolute;
@@ -65,19 +74,39 @@
 }
 .corner{
     position: absolute;
-    width: 124.45px;
+    /* width: 124.45px; */
+    width: 60px;
     height: 60px;
     transform: 50% 50% 0;
     transform: rotate(45deg);
-    left: -25.7%;
+    left: -8.49%;
     right: 85.8%;
-    top: -9.85%;
+    top: -5.35%;
     bottom: 88.32%;
+
     z-index: 10;
     overflow: hidden;
     border-right: 4px solid #1698D9;
+    
     background-image:  url(../../imeg/Pattern.png);
-  }
+}
+
+.corner::before{
+    content: "";
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    top: -50%;
+    left: -50%;
+    z-index: 1;
+   
+    background-image:  url(../../imeg/Pattern.png);
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}  
 
 .productItem_ended:hover~.corner{
     border-right: 4px solid #2EA8E6;
@@ -101,21 +130,7 @@
     
 }
 
-.corner::before{
-    content: "";
-    position: absolute;
-    width: 200%;
-    height: 200%;
-    top: -50%;
-    left: -50%;
-    z-index: 1;
-    background-image:  url(../../imeg/Pattern.png);
-    -webkit-transform: rotate(-45deg);
-    -moz-transform: rotate(-45deg);
-    -ms-transform: rotate(-45deg);
-    -o-transform: rotate(-45deg);
-    transform: rotate(-45deg);
-}
+
   
 .title{
     position: absolute;
